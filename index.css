@@ -1,0 +1,161 @@
+:root {
+    --blue: #1e90ff;
+    --white: #fff;
+    --black: #080001;
+    --purple: #4C1D95;
+    --light-purple: #DDD6FE;
+    --green: #059669;
+    --light-green: #34D399;
+    --red: #E11D48;
+    --light-red: #FB7185;
+    --gray: #4B5563;
+    --light-gray: #9CA3AF;
+    --dark-yellow: #F59E0B;
+    --light-yellow: #FCD34D;
+    --rounded-card: .5rem;
+    --rounded-btn: .25rem;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: Roboto, Ubuntu, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--black);
+    overflow: hidden;
+    width: 100vw;
+}
+
+button {
+    border-radius: var(--rounded-btn);
+    border: 2px solid var(--light-purple);
+    padding: .5rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.controls-section button {
+    border: 2px solid var(--gray);
+    color: var(--gray);
+}
+
+
+.container {
+    display: flex;
+    position: relative;
+    max-width: 80%;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+.cd-container {
+    width: 100%;
+    position: relative;
+}
+
+.score-section,
+.controls-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: .5rem;
+    text-align: center;
+}
+
+.score-section h3 {
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0;
+    line-height: 1;
+}
+
+#homescore,
+#guestscore {
+    padding: 1rem;
+    margin: 2rem 0;
+    font-size: 4rem;
+    background-color: var(--black);
+    color: var(--dark-yellow);
+    border-radius: var(--rounded-card);
+}
+
+#countdown {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--white);
+    padding: .5rem 1rem;
+    margin: 0 .5rem;
+    border: 2px solid var(--white);
+    border-radius: var(--rounded-card)
+}
+
+.controls-section {
+    background-color: var(--light-purple);
+    padding: 1.5rem;
+    border-radius: var(--rounded-card);
+}
+
+#startgame,
+#resumegame {
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+
+#resumegame,
+#endgame {
+    display: none;
+}
+
+#startgame:hover,
+#resumegame:hover {
+    border: 2px solid var(--light-green);
+}
+
+#pausegame {
+    border: 2px solid var(--dark-yellow);
+    color: var(--dark-yellow);
+}
+
+#pausegame:hover {
+    border: 2px solid var(--light-yellow);
+    color: var(--dark-yellow);
+}
+
+#endgame {
+    border: 2px solid var(--red);
+    color: var(--red);
+}
+
+#endgame:hover {
+    border: 2px solid var(--light-red);
+}
+
+#clearscores:hover {
+    border: 2px solid var(--light-gray);
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+    .score-section {
+        position: relative;
+        margin-top: 2rem;
+    }
+
+    .score-btns-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    #countdown {
+        position: absolute;
+        top: -4rem;
+        left: 0;
+        width: 100%;
+        margin: auto;
+    }
+
+}

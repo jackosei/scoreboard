@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="score-section">
+            <div class="score-section__left">
+                <h3>HOME</h3>
+                <div id="homescore">0</div>
+                <div class="score-btns-wrapper">
+                    <button onclick="addPoint(this, 1)">+1</button>
+                    <button onclick="addPoint(this, 2)">+2</button>
+                    <button onclick="addPoint(this, 3)">+3</button>
+                </div>
+            </div>
+            <div class="cd-container">
+                <span id="countdown">00:00</span>
+            </div>
+            <div class="score-section__right">
+                <h3>GUEST</h3>
+                <div id="guestscore">0</div>
+                <div class="score-btns-wrapper">
+                    <button onclick="addPoint(this, 1)">+1</button>
+                    <button onclick="addPoint(this, 2)">+2</button>
+                    <button onclick="addPoint(this, 3)">+3</button>
+                </div>
+            </div>
+        </div>
+        <div class="controls-section">
+            <button id="startgame" onclick="startTimer(30*60)">Start Game</button>
+            <button id="resumegame" onclick="resumeTimer()">Resume Game</button>
+            <button id="pausegame" onclick="pauseTimer()">Pause Game</button>
+            <button id="endgame" onclick="resetTimer()">End Game</button>
+            <button id="clearscores" onclick="clearScores()">Clear Scores</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
